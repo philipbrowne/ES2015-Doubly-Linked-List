@@ -121,6 +121,8 @@ class DoublyLinkedList {
     var afterNode = removed.next;
     var prevNode = removed.prev;
     (prevNode.next = afterNode), (afterNode.prev = prevNode);
+    //   removed.prev.next = removed.next;
+    //   removed.next.prev = removed.prev
     (removed.next = null), (removed.prev = null);
     this.length--;
     return removed;
